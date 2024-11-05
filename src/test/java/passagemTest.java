@@ -27,7 +27,7 @@ public class passagemTest {
     //depois do teste
     @AfterEach 
     public void finish() {
-        driver.quit(); // destroi o objeto selenium
+       // driver.quit(); // destroi o objeto selenium
     }
     
     //teste
@@ -70,8 +70,18 @@ public class passagemTest {
         driver.findElement(By.name("state")).sendKeys("MG");
         driver.findElement(By.name("zipCode")).sendKeys("54321");
         WebElement cardtype = driver.findElement(By.name("cardType"));
-        driver.findElement(By.name("state")).sendKeys("MG");
-        
+        cardtype.click();
+        cardtype.findElement(By.cssSelector("option:nth-child(2)")).click();
+        driver.findElement(By.name("creditCardNumber")).sendKeys("624289428");
+        driver.findElement(By.name("creditCardMonth")).clear();
+        driver.findElement(By.name("creditCardMonth")).sendKeys("09");
+        driver.findElement(By.name("creditCardYear")).clear();
+        driver.findElement(By.name("creditCardYear")).sendKeys("2030");
+        driver.findElement(By.name("nameOnCard")).sendKeys("Bárbara R.");
+        driver.findElement(By.name("rememberMe")).click();
+        driver.findElement(By.cssSelector("input.btn.btn-primary")).click();
+    
+    
     } // final da classe passagemTest
 
 } //
