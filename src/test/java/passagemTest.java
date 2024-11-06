@@ -40,7 +40,7 @@ public class passagemTest {
         driver.findElement(By.name("fromPort")).click();
         {
             WebElement dropdown = driver.findElement(By.name("fromPort"));
-            dropdown.findElement(By.xpath("//option[. = 'São Paolo']")).click();
+            dropdown.findElement(By.xpath("//option[. = 'Boston']")).click();
         }
         
         // destino
@@ -56,7 +56,7 @@ public class passagemTest {
         // transição de página
 
         // verifica se foi feito o login e se trocou de pagina
-        assertEquals("Flights from São Paolo to Cairo:", driver.findElement(By.cssSelector("h3")).getText());
+        assertEquals("Flights from Boston to Cairo:", driver.findElement(By.cssSelector("h3")).getText());
 
         driver.findElement(By.cssSelector("tr:nth-child(2) .btn")).click();
 
