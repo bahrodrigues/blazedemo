@@ -27,7 +27,7 @@ public class passagemTest {
     //depois do teste
     @AfterEach 
     public void finish() {
-       // driver.quit(); // destroi o objeto selenium
+       driver.quit(); // destroi o objeto selenium
     }
     
     //teste
@@ -47,7 +47,7 @@ public class passagemTest {
         {
             WebElement dropdown = driver.findElement(By.name("toPort"));
             dropdown.click();
-            dropdown.findElement(By.xpath("//option[. = 'Cairo']")).click();
+            dropdown.findElement(By.xpath("//option[. = 'Roma']")).click();
         }
  
         // clicar no botão 'find fligths'
@@ -56,7 +56,7 @@ public class passagemTest {
         // transição de página
 
         // verifica se foi feito o login e se trocou de pagina
-        assertEquals("Flights from Boston to Cairo:", driver.findElement(By.cssSelector("h3")).getText());
+        assertEquals("Flights from Boston to Roma:", driver.findElement(By.cssSelector("h3")).getText());
 
         driver.findElement(By.cssSelector("tr:nth-child(2) .btn")).click();
 
