@@ -15,3 +15,19 @@ Projeto utilizando a abordagem BDD (Behaviour Driven Development) - Desenvolvime
 Um teste será composto por 2 arquivos:
 - um arquivo de negócio, escrito em Gherkin (.feature)
 - um arquivo de automação, que faz referência ao .feature (.java)
+
+
+Projeto utilizando a abordagem Page Objects/Page Factory
+
+- Pode usar ou não BDD
+--> Foco na manutenção e reaproveitamento de longo prazo
+--> Util para projetos com Ciclo de Vida Desenvolvimento de Software longos (SLDC)
+
+Um teste vão ser vários arquivos
+- um arquivo de mapeamento para cada página ou região da página (*Page.java)
+- pode ter um arquivo de negócio, escrito em Gherkin (.feature)
+- um arquivo de automação, que faz referência ao .feature (.java) e ao mapeamento
+
+por projeto:
+- um arquivo de hooks (Before e After centralizados)
+- um arquivo runner (executa)

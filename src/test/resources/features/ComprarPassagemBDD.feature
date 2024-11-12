@@ -51,3 +51,5 @@ Funcionalidade: Comprar Passagem
         |cliente@teste.com    | Laranja24 | N   |email e senha incorretos |#2 VF
         |cliente123@teste.com | Laranja25 | N   |email e senha incorretos |#3 FV
         |cliente123@teste.com | Laranja24 | N   |email e senha incorretos |#3 FF
+
+
