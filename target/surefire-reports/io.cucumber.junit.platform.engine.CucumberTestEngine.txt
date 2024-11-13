@@ -1,4 +1,84 @@
 -------------------------------------------------------------------------------
 Test set: io.cucumber.junit.platform.engine.CucumberTestEngine
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 113.8 s -- in io.cucumber.junit.platform.engine.CucumberTestEngine
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 23.08 s <<< FAILURE! -- in io.cucumber.junit.platform.engine.CucumberTestEngine
+Exemplos.Example #1.1 -- Time elapsed: 18.57 s <<< ERROR!
+io.cucumber.junit.platform.engine.UndefinedStepException: 
+The step 'que acesso o site "https://blazedemo.com/" PO' and 3 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Dado("que acesso o site {string} PO")
+public void que_acesso_o_site_po(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Quando("escolho a {string} e {string} PO")
+public void escolho_a_e_po(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Quando("clico no botao {string} PO")
+public void clico_no_botao_po(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Entao("visualizo a lista de voos PO")
+public void visualizo_a_lista_de_voos_po() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+	at io.cucumber.junit.platform.engine.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:22)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.lambda$runTestCase$4(CucumberEngineExecutionContext.java:116)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:136)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:136)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.runTestCase(CucumberEngineExecutionContext.java:111)
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:168)
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+Exemplos.Example #1.2 -- Time elapsed: 3.945 s <<< ERROR!
+io.cucumber.junit.platform.engine.UndefinedStepException: 
+The step 'que acesso o site "https://blazedemo.com/" PO' and 3 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Dado("que acesso o site {string} PO")
+public void que_acesso_o_site_po(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Quando("escolho a {string} e {string} PO")
+public void escolho_a_e_po(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Quando("clico no botao {string} PO")
+public void clico_no_botao_po(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Entao("visualizo a lista de voos PO")
+public void visualizo_a_lista_de_voos_po() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+	at io.cucumber.junit.platform.engine.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:22)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.lambda$runTestCase$4(CucumberEngineExecutionContext.java:116)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:136)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:136)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.runTestCase(CucumberEngineExecutionContext.java:111)
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:168)
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+

@@ -17,16 +17,29 @@ public class HomePage extends CommomPage{
     // elementos mapeados
     // mapeamento para os combos de origem e destino
     public By byLocal(String local){
-        return By.cssSelector("option[value =\"" + local + "\"]") 
+        return By.cssSelector("option[value =\"" + local + "\"]"); 
         // toda vez que tem \"" a aspa vai ser ignorada na primeira vez mas ela vai ser usada na segunda vez
         // fica assim: option [value= "Rome"]
     }
         
-    @FindBy(css = "input.btn.btn-primary");
-    //@FindBy(css = ".btn.btn-primary");
-    //@FindBy(css = "input[value]");
+    @FindBy(css = "input.btn.btn-primary")
+    //@FindBy(css = ".btn.btn-primary")
+    //@FindBy(css = "input[value]")
     WebElement btnFindFlights;
 
     //ações com os elementos
+
+    public void selecionarDestino(String byOrigem, String byDestino){
+        driver.findElement(byLocal(byOrigem)).click();
+        driver.findElement(byLocal(byDestino)).click();
+    }
+
+    public void clicarFindFlights(){
+        btnFindFlights.click();
+    }
+
+    public void acessarHomePage(String url){
+        driver.get(url);
+    }
 
 }
