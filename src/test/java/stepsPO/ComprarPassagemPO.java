@@ -21,6 +21,9 @@ public class ComprarPassagemPO {
     private HomePage homePage;               // só eu posso usar a home
     private ReservePage reservePage;         // só eu posso usar a reserve
 
+    public String origem;
+    public String destino;
+
     //constructor
     public ComprarPassagemPO(Base base){
         this.driver = base.driver;
@@ -39,6 +42,8 @@ public class ComprarPassagemPO {
 
     @Quando("escolho a {string} e {string} PO")
     public void escolho_a_e_po(String origem, String destino) {
+        this.origem = origem;
+        this.destino = destino;
         homePage.selecionarDestino(origem,destino);
     }
 
@@ -52,5 +57,6 @@ public class ComprarPassagemPO {
     @Entao("visualizo a lista de voos PO")
     public void visualizo_a_lista_de_voos_po() {
         assertEquals("BlazeDemo - reserve", reservePage.lerNomeGuia());
+        assertEquals("Flights from " + this.origem + " to " + this.destino + ":", reservePage.lerTituloVoos());
     }
 }

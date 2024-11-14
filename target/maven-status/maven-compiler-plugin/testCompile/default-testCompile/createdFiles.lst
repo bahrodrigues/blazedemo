@@ -1,3 +1,4 @@
+stepsPO\Hooks.class
 pages\ReservePage.class
 pages\HomePage.class
 steps\ComprarPassagemBDD.class
