@@ -45,6 +45,17 @@ public class ComprarPassagemPO {
         this.origem = origem;
         this.destino = destino;
         homePage.selecionarDestino(origem,destino);
+
+        // ativar a sincronização para o robo executar devagar e podermos visualizar o funcionamento
+        // importante: só como curiosidade ou em caso de problemas, o indicado é executar o mais rapido possivel
+
+        synchronized(driver){
+            try{
+                driver.wait(2000);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     @E("clico no botao Find Flights PO")
@@ -58,5 +69,33 @@ public class ComprarPassagemPO {
     public void visualizo_a_lista_de_voos_po() {
         assertEquals("BlazeDemo - reserve", reservePage.lerNomeGuia());
         assertEquals("Flights from " + this.origem + " to " + this.destino + ":", reservePage.lerTituloVoos());
+        synchronized(driver){
+            try{
+                driver.wait(2000);
+            } catch (Exception e) {
+                e.printStackTrace();
+           }
+        }
     }
+
+    //funciona so para selecionar botao fixo
+    //@Quando("clico na {int} PO")
+    //public void clico_na_po(Integer ordem_do_voo) {
+    //    reservePage.selecionarVoo();
+    //}
+
+    //funciona para selecionar botoes em tabelas
+    @Quando("clico na {int} PO")
+    public void clico_na_po(Integer ordem_do_voo) {
+        reservePage.selecionarVooDinamico(ordem_do_voo);
+
+        synchronized(driver){
+            try{
+                driver.wait(5000);
+            } catch (Exception e) {
+                e.printStackTrace();
+           }
+        }
+    }
+
 }
